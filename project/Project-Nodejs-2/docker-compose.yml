@@ -1,0 +1,20 @@
+version: "3"
+services:
+  frontend:
+    container_name: web-ban-hang
+    image: anhlongwin1901/webbanhang:v2
+    build:
+      context: ./web-ban-hang
+      dockerfile: ./Dockerfile.dev
+    ports:
+      - "1901:1901"
+    networks:
+      - goals-net
+    volumes:
+      - ./web-ban-hang:/app
+      - /app/node_modules
+    depends_on:
+      - server
+networks:
+  goals-net:
+    external: true
