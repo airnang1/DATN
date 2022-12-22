@@ -17,5 +17,5 @@ EXPOSE 3000
 ENV MONGODB_USERNAME anhlongwin
 ENV MONGODB_PASSWORD anhlongwin1901
 
-CMD ["npm", "run", "start:dev"]
+CMD ["npm", "run", "start"]
 

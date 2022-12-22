@@ -15,6 +15,21 @@ services:
       - /app/node_modules
     depends_on:
       - server
+
+  server:
+    container_name: server
+    image: airnang/server:v1
+    build:
+      context: ./server
+      dockerfile: ./Dockerfile.dev
+    ports:
+      - "8800:8800"
+    networks:
+      - goals-net
+    volumes:
+      - ./web-ban-hang:/app
+      - /app/node_modules
+
 networks:
   goals-net:
     external: true
