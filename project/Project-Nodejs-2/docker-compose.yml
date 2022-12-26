@@ -2,12 +2,12 @@ version: "3"
 services:
   frontend:
     container_name: web-ban-hang
-    image: anhlongwin1901/webbanhang:v2
+    image: airnang/webbanhang:v2
     build:
       context: ./web-ban-hang
       dockerfile: ./Dockerfile.dev
     ports:
-      - "1901:1901"
+      - "1901:3003"
     restart: always
     networks:
       - goals-net
@@ -29,8 +29,8 @@ services:
     networks:
       - goals-net
     volumes:
-      - ./web-ban-hang:/app
-      - /app/node_modules
+      - ./server:/server
+      - /server/node_modules
 
 networks:
   goals-net:
