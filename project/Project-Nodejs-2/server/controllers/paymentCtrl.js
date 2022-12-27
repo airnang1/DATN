@@ -5,7 +5,7 @@ const sendEMailPurchase = require("../utils/sendMailPurchase.js");
 
 // const baseURL = "https://buihoanglong19012001.netlify.app/";
 const baseURL = "http://localhost:1901";
-const baseURLBE = "http://localhost:8800/api";
+const baseURLBE = "http://13.228.168.148:8800/api";
 // const baseURLBE = "https://servernodeapp1901.herokuapp.com/api";
 
 const paypalProductCtrl = {

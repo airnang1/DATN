@@ -35,7 +35,7 @@
   "engines": {
     "node": "16.15.0"
   },
-  "proxy": "http://localhost:8800/api",
+  "proxy": "http://13.228.168.148:8800/api",
   "devDependencies": {
     "nodemon": "^2.0.16"
   }
