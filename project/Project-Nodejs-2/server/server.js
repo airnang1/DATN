@@ -60,7 +60,7 @@ app.use(function (req, res, next) {
   res.header(
     "Access-Control-Allow-Origin",
     process.env.NODE_ENV !== "production"
-      ? ["http://13.228.168.148:1901"]
+      ? ["http://13.251.59.19:1901"]
       : ["https://buihoanglong19012001.netlify.app/"]
   );
 
