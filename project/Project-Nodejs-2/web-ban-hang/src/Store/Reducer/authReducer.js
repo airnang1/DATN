@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 const baseURL = process.env.REACT_APP_SERVER_API;
 
 axios.defaults.withCredentials = true;
+axios.defaults.timeout = 3000;
 
 // handle feature for User Page
 export const updateProfileUser = createAsyncThunk(

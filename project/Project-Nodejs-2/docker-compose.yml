@@ -32,6 +32,28 @@ services:
       - ./server:/server
       - /server/node_modules
 
+  truffle:
+    build:
+      context: ./truffle
+      target: truffle
+    depends_on:
+      - ganache
+    networks:
+      - goals-net
+    volumes:
+      - .:/home/app
+      - /home/app/node_modules
+
+  ganache:
+    build:
+      context: ./truffle
+      target: ganache
+    ports:
+      - 8545:8545
+    networks:
+      - goals-net
+
+
 networks:
   goals-net:
     external: true
